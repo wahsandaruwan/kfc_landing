@@ -140,3 +140,42 @@ header .menu li{
     max-width: 50px;
 }
 
+/* -----Image Slide----- */
+/* First Image */
+#burger:checked ~ .container .bg-img img:nth-child(1){
+    visibility: visible;
+    opacity: 1;
+}
+
+#burger:checked ~ .container .bg-img img:nth-child(2),
+#burger:checked ~ .container .bg-img img:nth-child(3){
+    max-height: 0;
+    visibility: hidden;
+    opacity: 0;
+}
+
+/* Second Image */
+#coke:checked ~ .container .bg-img img:nth-child(2){
+    visibility: visible;
+    opacity: 1;
+}
+
+#coke:checked ~ .container .bg-img img:nth-child(1),
+#coke:checked ~ .container .bg-img img:nth-child(3){
+    max-height: 0;
+    visibility: hidden;
+    opacity: 0;
+}
+
+/* third Image */
+#fries:checked ~ .container .bg-img img:nth-child(3){
+    visibility: visible;
+    opacity: 1;
+}
+
+#fries:checked ~ .container .bg-img img:nth-child(1),
+#fries:checked ~ .container .bg-img img:nth-child(2){
+    max-height: 0;
+    visibility: hidden;
+    opacity: 0;
+}
