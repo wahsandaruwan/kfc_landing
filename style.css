@@ -143,12 +143,12 @@ header .menu li{
     background-color: #c0392b;
 }
 
-.orange{
-    background-color: #d35400;
-}
-
 .yellow{
     background-color: #f39c12;
+}
+
+.orange{
+    background-color: #d35400;
 }
 
 /* -----Fixed Menu----- */
@@ -185,30 +185,30 @@ header .menu li{
 }
 
 /* Second Image */
-#coke:checked ~ .container .bg-img img:nth-child(2){
+#fries:checked ~ .container .bg-img img:nth-child(2){
     visibility: visible;
     opacity: 1;
 }
 
-#coke:checked ~ .container .bg-img img:nth-child(1),
-#coke:checked ~ .container .bg-img img:nth-child(3),
-#coke:checked ~ .red,
-#coke:checked ~ .yellow{
+#fries:checked ~ .container .bg-img img:nth-child(1),
+#fries:checked ~ .container .bg-img img:nth-child(3),
+#fries:checked ~ .red,
+#fries:checked ~ .orange{
     max-height: 0;
     visibility: hidden;
     opacity: 0;
 }
 
 /* third Image */
-#fries:checked ~ .container .bg-img img:nth-child(3){
+#coke:checked ~ .container .bg-img img:nth-child(3){
     visibility: visible;
     opacity: 1;
 }
 
-#fries:checked ~ .container .bg-img img:nth-child(1),
-#fries:checked ~ .container .bg-img img:nth-child(2),
-#fries:checked ~ .red,
-#fries:checked ~ .orange{
+#coke:checked ~ .container .bg-img img:nth-child(1),
+#coke:checked ~ .container .bg-img img:nth-child(2),
+#coke:checked ~ .red,
+#coke:checked ~ .yellow{
     max-height: 0;
     visibility: hidden;
     opacity: 0;
