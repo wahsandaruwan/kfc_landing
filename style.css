@@ -18,7 +18,7 @@ body{
 
 a{
     text-decoration: none;
-    color: #c0392b;
+    color: #000;
     transition: all 0.3s ease-in;
 }
 
@@ -31,7 +31,6 @@ li{
 li:hover,
 li:hover > a{
     transform: scale(1.1);
-    color: #000;
 }
 
 label{
@@ -44,6 +43,8 @@ input[type="radio"]{
 
 /* -----Header----- */
 header{
+    position: relative;
+    z-index: 101;
     width: 100%;
     padding: 20px 200px;
     display: flex;
@@ -68,11 +69,13 @@ header .menu{
 }
 
 header .menu li{
-    margin-left: 70px;
+    margin-left: 60px;
 }
 
 /* -----Container----- */
 .container{
+    position: relative;
+    z-index: 100;
     min-height: 75vh;
     width: 100%;
     display: flex;
@@ -93,7 +96,7 @@ header .menu li{
 
 .container .text-box h2 span{
     padding: 0px 15px;
-    background-color: #c0392b;
+    background-color: #000;
     color: #fff;
 }
 
@@ -105,15 +108,16 @@ header .menu li{
 .container .text-box a{
     display: inline-block;
     padding: 20px 50px;
-    background-color: #c0392b;
-    color: #fff;
+    border: 3px #000 solid;
+    color: #000;
 }
 
 .container .text-box a:hover{
     background-color: #000;
+    color: #fff;
 }
 
-/* Image */
+/* Images */
 .container .bg-img{
     width: 650px;
     overflow: hidden;
@@ -124,12 +128,36 @@ header .menu li{
     transition: all 0.5s ease-in;
 }
 
+/* Shapes */
+.shape{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    clip-path: circle(60% at right);
+    transition: all 0.5s ease-in;
+}
+
+.red{
+    background-color: #c0392b;
+}
+
+.orange{
+    background-color: #d35400;
+}
+
+.yellow{
+    background-color: #f39c12;
+}
+
 /* -----Fixed Menu----- */
 .thumb{
     position: fixed;
     top: 40%;
     right: 5px;
     padding: 10px;
+    z-index: 101;
 }
 
 .thumb li{
@@ -148,7 +176,9 @@ header .menu li{
 }
 
 #burger:checked ~ .container .bg-img img:nth-child(2),
-#burger:checked ~ .container .bg-img img:nth-child(3){
+#burger:checked ~ .container .bg-img img:nth-child(3),
+#burger:checked ~ .orange,
+#burger:checked ~ .yellow{
     max-height: 0;
     visibility: hidden;
     opacity: 0;
@@ -161,7 +191,9 @@ header .menu li{
 }
 
 #coke:checked ~ .container .bg-img img:nth-child(1),
-#coke:checked ~ .container .bg-img img:nth-child(3){
+#coke:checked ~ .container .bg-img img:nth-child(3),
+#coke:checked ~ .red,
+#coke:checked ~ .yellow{
     max-height: 0;
     visibility: hidden;
     opacity: 0;
@@ -174,7 +206,9 @@ header .menu li{
 }
 
 #fries:checked ~ .container .bg-img img:nth-child(1),
-#fries:checked ~ .container .bg-img img:nth-child(2){
+#fries:checked ~ .container .bg-img img:nth-child(2),
+#fries:checked ~ .red,
+#fries:checked ~ .orange{
     max-height: 0;
     visibility: hidden;
     opacity: 0;
