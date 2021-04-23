@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;1,100;1,300;1,400;1,700&display=swap');
+
+/* -----Reset----- */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+/* -----Common----- */
+body{
+    background-color: #fff;
+    width: 100%;
+    min-height: 100vh;
+    padding: 0px 20px;
+}
+
+a{
+    text-decoration: none;
+    color: #c0392b;
+    transition: all 0.3s ease-in;
+}
+
+li{
+    list-style: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in; 
+}
+
+li:hover,
+li:hover > a{
+    transform: scale(1.1);
+    color: #000;
+}
+
+label{
+    cursor: pointer;
+}
+
+input[type="radio"]{
+    display: none;
+}
+
+/* -----Header----- */
+header{
+    width: 100%;
+    padding: 20px 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo */
+header .logo{
+    max-width: 80px;
+}
+
+header .logo img{
+    width: 100%;
+}
+
+/* Nav Menu */
+header .menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .menu li{
+    margin-left: 70px;
+}
+
+/* -----Container----- */
+.container{
+    min-height: 75vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+/* Text */
+.container .text-box{
+    width: 600px;
+    padding: 20px;
+    text-align: left;
+}
+
+.container .text-box h2{
+    font-size: 4rem;
+}
+
+.container .text-box h2 span{
+    padding: 0px 15px;
+    background-color: #c0392b;
+    color: #fff;
+}
+
+.container .text-box p{
+    font-size: 1rem;
+    margin: 10px 0px;
+}
+
+.container .text-box a{
+    display: inline-block;
+    padding: 20px 50px;
+    background-color: #c0392b;
+    color: #fff;
+}
+
+.container .text-box a:hover{
+    background-color: #000;
+}
+
+/* Image */
+.container .bg-img{
+    width: 650px;
+    overflow: hidden;
+}
+
+.container .bg-img img{
+    width: 100%;
+    transition: all 0.5s ease-in;
+}
+
+/* -----Fixed Menu----- */
+.thumb{
+    position: fixed;
+    top: 40%;
+    right: 5px;
+    padding: 10px;
+}
+
+.thumb li{
+    margin: 10px 0;
+}
+
+.thumb img{
+    max-width: 50px;
+}
+
