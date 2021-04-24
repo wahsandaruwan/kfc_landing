@@ -6,17 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KFC Promotion</title>
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
 </head>
 <body>
     <!-- Header -->
     <header>
-        <a href="#" class="logo"><img src="./imgs/logo.png" alt=""></a>
+        <!-- Menu Checkbox -->
+        <input type="checkbox" id="menu-show">
+        <a href="#" class="logo">
+            <img src="./imgs/logo.png" alt="">
+        </a>
         <ul class="menu">
             <li><a href="#">Home</a></li>
             <li><a href="#">Burgers</a></li>
             <li><a href="#">Fries</a></li>
             <li><a href="#">Drinks</a></li>
         </ul>
+        <!-- Menu Icons -->
+        <label for="menu-show"><i class="fas fa-bars"></i></label>
+        <label for="menu-show"><i class="fas fa-times"></i></label>
     </header>
     <!-- Image Slide Radio -->
     <input type="radio" id="burger" name="rd" checked>

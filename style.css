@@ -13,7 +13,6 @@ body{
     background-color: #fff;
     width: 100%;
     min-height: 100vh;
-    padding: 0px 20px;
 }
 
 a{
@@ -37,24 +36,27 @@ label{
     cursor: pointer;
 }
 
-input[type="radio"]{
+input[type="radio"],
+input[type="checkbox"]{
     display: none;
 }
 
 /* -----Header----- */
 header{
-    position: relative;
-    z-index: 101;
     width: 100%;
     padding: 20px 200px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    overflow-x: hidden;
 }
 
 /* Logo */
 header .logo{
+    position: relative;
+    z-index: 101;
     max-width: 80px;
+    text-align: center;
 }
 
 header .logo img{
@@ -63,13 +65,29 @@ header .logo img{
 
 /* Nav Menu */
 header .menu{
+    position: relative;
+    z-index: 101;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 header .menu li{
-    margin-left: 60px;
+    margin: 0px 35px;
+}
+
+/* Menu Icon */
+header label{
+    position: fixed;
+    z-index: 101;
+    top: 40px;
+    right: 50px;
+    display: none;
+}
+
+header label i{
+    font-size: 1.5rem;
+    color: #000;
 }
 
 /* -----Container----- */
@@ -81,6 +99,7 @@ header .menu li{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    padding: 0 20px;
 }
 
 /* Text */
@@ -212,4 +231,77 @@ header .menu li{
     max-height: 0;
     visibility: hidden;
     opacity: 0;
+}
+
+/* -----Responsive----- */
+@media(max-width: 950px){
+    /* Header */
+    header{
+        flex-direction: column;
+        padding: 20px 50px;
+    }
+
+    header .logo{
+        margin-bottom: 10px;
+    }
+
+    /* Container */
+    .container{
+        flex-direction: column;
+    }
+
+    .container .text-box{
+        width: 100%;
+        max-width: 550px;
+        text-align: center;
+    }
+
+    .container .bg-img{
+        width: 100%;
+        max-width: 550px;
+    }
+}
+
+@media(max-width: 470px){
+    /* Header */
+    header .menu{
+        position: absolute;
+        width: 100%;
+        flex-direction: column;
+        background-color: #fff;
+        padding: 10px 0px;
+        top: 120px;
+        left: -100%;
+        transition: all 0.3s ease-in;
+    }
+
+    header .menu li{
+        margin: 15px 0;
+    }
+
+    header label:nth-child(4){
+        display: block;
+    }
+
+    /* Container */
+    .container .text-box h2{
+        font-size: 3rem;
+    }
+
+    /* Fixed Menu */
+    .thumb img{
+        max-width: 30px;
+    }
+
+    /* Responsive Menu */
+    #menu-show:checked ~ .menu{
+        left: 0;
+    }
+
+    #menu-show:checked ~ label:nth-child(4){
+        display: none;
+    }
+    #menu-show:checked ~ label:nth-child(5){
+        display: block;
+    }
 }
