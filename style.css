@@ -78,7 +78,7 @@ header .menu li{
 
 /* Menu Icon */
 header label{
-    position: fixed;
+    position: absolute;
     z-index: 101;
     top: 40px;
     right: 50px;
@@ -100,6 +100,7 @@ header label i{
     justify-content: space-evenly;
     align-items: center;
     padding: 0 20px;
+    margin-bottom: 100px;
 }
 
 /* Text */
@@ -187,6 +188,44 @@ header label i{
     max-width: 50px;
 }
 
+/* Footer */
+footer{
+    width: 100%;
+    position: fixed;
+    z-index: 101;
+    bottom: 0;
+    left: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex-direction: column;
+}
+
+footer .social{
+    margin-bottom: 10px;
+}
+
+footer .social a{
+    margin-left: 20px;
+}
+
+footer .social i{
+    color: #000;
+    font-size: 1.5rem;
+    transition: all 0.3s ease-in;
+}
+
+footer .social i:hover{
+    transform: scale(1.1);
+}
+
+footer .credit{
+    text-align: right;
+    color: #000;
+    font-size: 0.9rem;
+}
+
 /* -----Image Slide----- */
 /* First Image */
 #burger:checked ~ .container .bg-img img:nth-child(1){
@@ -259,6 +298,11 @@ header label i{
     .container .bg-img{
         width: 100%;
         max-width: 550px;
+    }
+
+    /* Footer */
+    footer{
+        background-color: #fff;
     }
 }
 
