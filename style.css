@@ -27,6 +27,10 @@ li{
     transition: all 0.3s ease-in; 
 }
 
+li:hover{
+    transform: scale(1.1);
+}
+
 label{
     cursor: pointer;
 }
@@ -70,11 +74,6 @@ header .menu{
 header .menu li{
     margin: 0 15px;
     padding: 10px 20px;
-}
-
-header .menu li:hover{
-    background-color: #fff;
-    border-radius: 15px;
 }
 
 /* Menu Icon */
@@ -185,10 +184,6 @@ header label i{
 .thumb li{
     margin: 10px 0;
     transition: all 0.3s ease-in;
-}
-
-.thumb li:hover{
-    transform: scale(1.1);
 }
 
 .thumb img{
