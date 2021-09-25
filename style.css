@@ -62,7 +62,7 @@ header .logo img{
     width: 100%;
 }
 
-/* Nav Menu */
+/* Menu Links */
 header .menu{
     max-width: 300px;
     position: relative;
@@ -77,7 +77,7 @@ header .menu li{
     padding: 10px 20px;
 }
 
-/* Menu Icon */
+/* Menu Icons */
 header label{
     position: absolute;
     z-index: 101;
@@ -178,7 +178,7 @@ header label i{
     background-color: #d35400;
 }
 
-/* -----Fixed Menu----- */
+/* -----Fixed Image Slide Menu----- */
 .thumb{
     position: fixed;
     top: 50%;
@@ -211,6 +211,7 @@ footer{
     flex-direction: column;
 }
 
+/* Social Icons */
 footer .social{
     margin-bottom: 10px;
 }
@@ -229,6 +230,7 @@ footer .social i:hover{
     transform: scale(1.1);
 }
 
+/* Credit Text */
 footer .credit{
     text-align: right;
     color: #000;
@@ -266,7 +268,7 @@ footer .credit{
     opacity: 0;
 }
 
-/* third Image */
+/* Third Image */
 #coke:checked ~ .container .bg-img img:nth-child(3){
     visibility: visible;
     opacity: 1;
@@ -305,8 +307,8 @@ footer .credit{
     }
 
     .container .bg-img{
+        max-width: 450px;
         width: 100%;
-        max-width: 550px;
     }
 
     .container .bg-img img:nth-child(3){
